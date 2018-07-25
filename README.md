@@ -2,6 +2,7 @@
 
 Multi master durumunda clientlar hagi masterin ipsini kullanacak?
 Kaynak: https://dzone.com/articles/nginx-and-elasticsearch
+        https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-16-04
 
 masterların onunde bir nginx olmalı configi su sekilde:
 
@@ -101,6 +102,9 @@ http {
 ```
 service nginx start
 service nginx restart vb de kullanılabilir.
+
+If you are simply making configuration changes, Nginx can often reload without dropping connections. To do this, this command can be used:
+sudo systemctl reload nginx
 
 
 Tunnelling gerekirse :
