@@ -115,3 +115,12 @@ ssh -L9200:10.10.10.70:8080 root@18.218.170.149
 Burada 10.10.10.70 in 8080 portuna 18.218.170.149 routeri uzerinden baglanıp bizim 9200 portumuza baglıyor.
 Sonrada localhost:9200 u kullanarak 10 lu ip deki makinanın istedigimiz portuna erişiyoruz.
 10 lu ip de ki 8080 portunun configurasyonu yukardaki nginx conf ile yapıldı.
+
+
+*Security*
+
+Add the following line to your elasticsearch.yml to disable dynamic scripting and prevent remote code execution:
+
+script.disable_dynamic: true
+
+https://bou.ke/blog/elasticsearch-rce/
